@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoBU Martial Gym - Sign Up</title>
+    <meta
+      name="description"
+      content="Join DoBU Martial Gym today and start your martial arts journey with our expert instructors and state-of-the-art facilities."
+    />
+    <script
+      src="https://kit.fontawesome.com/c93f7e977e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      :root {
+        --primary-color: #e74c3c;
+        --secondary-color: #2c3e50;
+        --accent-color: #3498db;
+        --light-bg: #f8f9fa;
+        --dark-text: #2c3e50;
+        --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        --hover-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        --form-bg: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--dark-text);
+        background-color: var(--light-bg);
+        line-height: 1.6;
+      }
+
+      /* Navbar Styles */
+      .navbar {
+        background-color: var(--secondary-color) !important;
+        padding: 1rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-brand img.logo {
+        height: 50px;
+        transition: transform 0.3s ease;
+      }
+
+      .navbar-brand:hover img.logo {
+        transform: scale(1.05);
+      }
+
+      .nav-link {
+        font-weight: 500;
+        margin: 0 10px;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: var(--primary-color) !important;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: var(--primary-color);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      .nav-link:hover::after {
+        width: 80%;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        background: linear-gradient(
+            rgba(44, 62, 80, 0.8),
+            rgba(44, 62, 80, 0.8)
+          ),
+          url("https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .hero-section h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-section p {
+        font-size: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto 30px;
+      }
+
+      .btn-hero {
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: 600;
+        padding: 12px 30px;
+        border-radius: 50px;
+        border: none;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+      }
+
+      .btn-hero:hover {
+        background-color: #c0392b;
+        transform: translateY(-3px);
+        box-shadow: 0 7px 20px rgba(231, 76, 60, 0.4);
+      }
+
+      /* Form Section */
+      .form-section {
+        padding: 50px 0;
+        background-color: var(--light-bg);
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+        position: relative;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-header h2::after {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 4px;
+        background-color: var(--primary-color);
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .section-header p {
+        max-width: 700px;
+        margin: 20px auto 0;
+        color: #7f8c8d;
+        font-size: 1.1rem;
+      }
+
+      /* Form Card Styles */
+      .form-card {
+        background: var(--form-bg);
+        border-radius: 15px;
+        box-shadow: var(--card-shadow);
+        overflow: hidden;
+        max-width: 800px;
+        margin: 0 auto;
+        transition: all 0.4s ease;
+      }
+
+      .form-card:hover {
+        box-shadow: var(--hover-shadow);
+      }
+
+      .form-card-header {
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .form-card-header h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      .form-card-body {
+        padding: 30px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        font-weight: 600;
+        color: var(--dark-text);
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      .form-control {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 12px 15px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .form-control:focus {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+      }
+
+      .btn-submit {
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: 600;
+        padding: 12px 30px;
+        border-radius: 50px;
+        border: none;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .btn-submit:hover {
+        background-color: #c0392b;
+        transform: translateY(-3px);
+        box-shadow: 0 7px 20px rgba(231, 76, 60, 0.4);
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: var(--dark-text) !important;
+        color: #fff;
+        padding: 40px 0 20px;
+        margin-top: 50px;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .footer-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .footer-left p {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-icons a {
+        color: #74c0fc;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: var(--primary-color);
+        transform: translateY(-5px);
+      }
+
+      .footer-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 15px;
+      }
+
+      .footer-right a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .footer-right a:hover {
+        color: var(--primary-color);
+      }
+
+      .footer-rightafter {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+      }
+
+      .footer-right a:hover::after {
+        width: 100%;
+      }
+
+      .copyright {
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #bdc3c7;
+        font-size: 0.9rem;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 992px) {
+        .hero-section h1 {
+          font-size: 2.8rem;
+        }
+        .section-header h2 {
+          font-size: 2.2rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-section h1 {
+          font-size: 2.2rem;
+        }
+        .hero-section p {
+          font-size: 1.2rem;
+        }
+        .section-header h2 {
+          font-size: 1.8rem;
+        }
+        .footer-container {
+          flex-direction: column;
+          text-align: center;
+          gap: 30px;
+        }
+        .footer-right {
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero-section {
+          padding: 70px 0;
+        }
+        .hero-section h1 {
+          font-size: 1.8rem;
+        }
+        .hero-section p {
+          font-size: 1rem;
+        }
+        .section-header h2 {
+          font-size: 1.5rem;
+        }
+        .form-card-body {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <!-- Logo on the left side -->
+        <a href="index.html" class="navbar-brand">
+          <img
+            src="/images/logo.png"
+            alt="DoBU Martial Gym Logo"
+            class="logo"
+          />
+        </a>
+
+        <!-- Toggle button for small screens -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="plans.html">Plans</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="instructors.html">Instructors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="facilities.html">Facilities</a>
+            </li>
+          </ul>
+
+          <!-- Sign Up on the far right -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-light rounded-pill px-4"
+                href="signUp.html"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section animate__animated animate__fadeIn">
+      <div class="container">
+        <h1>Join DoBU Martial Gym</h1>
+        <p>
+          Start your martial arts journey with our expert instructors and
+          state-of-the-art facilities
+        </p>
+        <a href="#signup-form" class="btn btn-hero">Sign Up Now</a>
+      </div>
+    </section>
+
+    <!-- Sign Up Form Section -->
+    <section
+      id="signup-form"
+      class="form-section animate__animated animate__fadeInUp"
+    >
+      <div class="container">
+        <div class="section-header">
+          <h2>Create Your Account</h2>
+          <p>
+            Fill out the form below to join our community and start your martial
+            arts journey
+          </p>
+        </div>
+
+        <div class="form-card">
+          <div class="form-card-header">
+            <h3>Membership Registration</h3>
+          </div>
+          <div class="form-card-body">
+            <form action="send-contact.php" method="post">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="inputEmail4">Email Address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="inputEmail4"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="inputPhoneNumber">Phone Number</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="inputPhoneNumber"
+                      placeholder="Enter your phone number"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="1234 Main St"
+                  required
+                />
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="inputCity">City</label>
+                    <select id="inputCity" class="form-control" required>
+                      <option selected value="">Choose...</option>
+                      <option>Singapore</option>
+                      <option>United States</option>
+                      <option>Canada</option>
+                      <option>United Kingdom</option>
+                      <option>Australia</option>
+                      <option>Japan</option>
+                      <option>Germany</option>
+                      <option>France</option>
+                      <option>India</option>
+                      <option>China</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="inputMembership">Membership Plan</label>
+                    <select id="inputMembership" class="form-control" required>
+                      <option selected value="">Select a plan...</option>
+                      <option>Basic Plan - £25.00/month</option>
+                      <option>Intermediate Plan - £35.00/month</option>
+                      <option>Advanced Plan - £45.00/month</option>
+                      <option>Elite Plan - £60.00/month</option>
+                      <option>
+                        Private Martial Arts Tuition - £15.00/hour
+                      </option>
+                      <option>Junior Membership - £25.00/month</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inputExperience">Martial Arts Experience</label>
+                <select id="inputExperience" class="form-control" required>
+                  <option selected value="">Select your level...</option>
+                  <option>Beginner (No previous experience)</option>
+                  <option>Novice (Less than 1 year)</option>
+                  <option>Intermediate (1-3 years)</option>
+                  <option>Advanced (3-5 years)</option>
+                  <option>Expert (5+ years)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="inputComments">Additional Comments</label>
+                <textarea
+                  class="form-control"
+                  id="inputComments"
+                  rows="3"
+                  placeholder="Any special requirements or questions..."
+                ></textarea>
+              </div>
+
+              <div class="form-check mb-3">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="termsCheck"
+                  required
+                />
+                <label class="form-check-label" for="termsCheck">
+                  I agree to the <a href="#">Terms and Conditions</a> and
+                  <a href="#">Privacy Policy</a>
+                </label>
+              </div>
+
+              <button type="submit" class="btn-submit">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <!-- Left side: Follow Us On and Social Icons below it -->
+        <div class="footer-left">
+          <p>Follow Us On</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/home" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/" aria-label="Facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/?lang=en" aria-label="Twitter">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right side: Contact Us and About Us links -->
+        <div class="footer-right">
+          <a href="contactUs.html">Contact Us</a>
+          <a href="aboutUs.html">About Us</a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          &copy; 2023 DoBU Martial Gym. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Form validation
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          const email = document.getElementById("inputEmail4").value;
+          const phone = document.getElementById("inputPhoneNumber").value;
+          const city = document.getElementById("inputCity").value;
+          const membership = document.getElementById("inputMembership").value;
+          const experience = document.getElementById("inputExperience").value;
+          const terms = document.getElementById("termsCheck").checked;
+
+          if (
+            !email ||
+            !phone ||
+            !city ||
+            !membership ||
+            !experience ||
+            !terms
+          ) {
+            event.preventDefault();
+            alert(
+              "Please fill in all required fields and accept the terms and conditions."
+            );
+          }
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

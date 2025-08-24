@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoBU Martial Gym - About Us</title>
+    <meta
+      name="description"
+      content="Learn about DoBU Martial Gym's story, mission, and founders. Discover our commitment to martial arts excellence and community empowerment."
+    />
+    <script
+      src="https://kit.fontawesome.com/c93f7e977e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      :root {
+        --primary-color: #e74c3c;
+        --secondary-color: #2c3e50;
+        --accent-color: #3498db;
+        --light-bg: #f8f9fa;
+        --dark-text: #2c3e50;
+        --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        --hover-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--dark-text);
+        background-color: var(--light-bg);
+        line-height: 1.6;
+      }
+
+      /* Navbar Styles */
+      .navbar {
+        background-color: var(--secondary-color) !important;
+        padding: 1rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-brand img.logo {
+        height: 50px;
+        transition: transform 0.3s ease;
+      }
+
+      .navbar-brand:hover img.logo {
+        transform: scale(1.05);
+      }
+
+      .nav-link {
+        font-weight: 500;
+        margin: 0 10px;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: var(--primary-color) !important;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: var(--primary-color);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      .nav-link:hover::after {
+        width: 80%;
+      }
+
+      /* Section Headers */
+      .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+        position: relative;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-header h2::after {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 4px;
+        background-color: var(--primary-color);
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .section-header p {
+        max-width: 700px;
+        margin: 20px auto 0;
+        color: #7f8c8d;
+        font-size: 1.1rem;
+      }
+
+      /* Story and Mission Section */
+      .story-mission-section {
+        padding: 80px 0;
+        background-color: white;
+      }
+
+      .story-card,
+      .mission-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        transition: all 0.4s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .story-card:hover,
+      .mission-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--hover-shadow);
+      }
+
+      .story-card .card-img,
+      .mission-card .card-img {
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .story-card:hover .card-img,
+      .mission-card:hover .card-img {
+        transform: scale(1.05);
+      }
+
+      .story-card .card-body,
+      .mission-card .card-body {
+        padding: 30px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .story-card h1,
+      .mission-card h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .story-card h1::after,
+      .mission-card h1::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 3px;
+        background-color: var(--primary-color);
+        bottom: -10px;
+        left: 0;
+      }
+
+      .story-card p,
+      .mission-card p {
+        color: #7f8c8d;
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      /* Founders Section */
+      .founders-section {
+        padding: 80px 0;
+        background-color: var(--light-bg);
+      }
+
+      .founder-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        transition: all 0.4s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .founder-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--hover-shadow);
+      }
+
+      .founder-card .card-img-top {
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .founder-card:hover .card-img-top {
+        transform: scale(1.05);
+      }
+
+      .founder-card .card-body {
+        padding: 30px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .founder-card h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .founder-card h5 {
+        font-size: 1.1rem;
+        color: var(--accent-color);
+        font-weight: 500;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .founder-card p {
+        color: #7f8c8d;
+        font-size: 1rem;
+        line-height: 1.7;
+        flex-grow: 1;
+      }
+
+      .special-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: var(--accent-color);
+        color: white;
+        padding: 5px 15px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        z-index: 10;
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: #000000;
+        color: #fff;
+        padding: 40px 0 20px;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .footer-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .footer-left p {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-icons a {
+        color: #74c0fc;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: var(--primary-color);
+        transform: translateY(-5px);
+      }
+
+      .footer-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 15px;
+      }
+
+      .footer-right a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .footer-right a:hover {
+        color: var(--primary-color);
+      }
+
+      .footer-right a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+      }
+
+      .footer-right a:hover::after {
+        width: 100%;
+      }
+
+      .copyright {
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #bdc3c7;
+        font-size: 0.9rem;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 992px) {
+        .hero-section h1 {
+          font-size: 2.8rem;
+        }
+        .section-header h2 {
+          font-size: 2.2rem;
+        }
+        .story-card h1,
+        .mission-card h1 {
+          font-size: 1.8rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .section-header h2 {
+          font-size: 1.8rem;
+        }
+        .story-card h1,
+        .mission-card h1 {
+          font-size: 1.6rem;
+        }
+        .footer-container {
+          flex-direction: column;
+          text-align: center;
+          gap: 30px;
+        }
+        .footer-right {
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .section-header h2 {
+          font-size: 1.5rem;
+        }
+        .story-card h1,
+        .mission-card h1 {
+          font-size: 1.4rem;
+        }
+        .founder-card h3 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <!-- Logo on the left side -->
+        <a href="Index.html" class="navbar-brand">
+          <img
+            src="/images/logo.png"
+            alt="DoBU Martial Gym Logo"
+            class="logo"
+          />
+        </a>
+
+        <!-- Toggle button for small screens -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="plans.html">Plans</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="instructors.html">Instructors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="facilities.html">Facilities</a>
+            </li>
+          </ul>
+
+          <!-- Sign Up on the far right -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-light rounded-pill px-4"
+                href="signUp.html"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- About Section -->
+    <main id="about">
+      <!-- Story Section -->
+      <section class="story-mission-section">
+        <div class="container">
+          <div class="section-header animate__animated animate__fadeInUp">
+            <h2>Our Story</h2>
+            <p>
+              The journey of DoBU Martial Arts from a small community space to a
+              premier training center
+            </p>
+          </div>
+
+          <div class="row align-items-center">
+            <div
+              class="col-lg-6 animate__animated animate__fadeInLeft"
+              style="animation-delay: 0.1s"
+            >
+              <div class="story-card">
+                <div class="card-body">
+                  <h1>Our Story</h1>
+                  <p>
+                    DoBu Martial Arts was founded with a passion for martial
+                    arts and a commitment to empowering individuals of all ages
+                    and skill levels. Starting as a small community space, we've
+                    grown into a premier training center, offering a variety of
+                    martial arts, fitness, and self-defense classes. Our journey
+                    is built on a dedication to providing a welcoming, inclusive
+                    environment where everyone can train, grow, and connect with
+                    others who share their passion.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-6 animate__animated animate__fadeInRight"
+              style="animation-delay: 0.2s"
+            >
+              <img
+                src="/images/os.png"
+                class="card-img rounded-3"
+                alt="Our Story"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission Section -->
+      <section class="story-mission-section">
+        <div class="container">
+          <div class="section-header animate__animated animate__fadeInUp">
+            <h2>Our Mission</h2>
+            <p>
+              Our commitment to excellence in martial arts training and personal
+              development
+            </p>
+          </div>
+
+          <div class="row align-items-center">
+            <div
+              class="col-lg-6 order-lg-2 animate__animated animate__fadeInLeft"
+              style="animation-delay: 0.1s"
+            >
+              <div class="mission-card">
+                <div class="card-body">
+                  <h1>Our Mission</h1>
+                  <p>
+                    At DoBu Martial Arts, our mission is to inspire, educate,
+                    and strengthen individuals through martial arts. We aim to
+                    promote discipline, self-confidence, and respect in each
+                    member, fostering both physical and personal growth. By
+                    offering top-quality instruction and state-of-the-art
+                    facilities, we strive to be a trusted space where members
+                    can pursue fitness, learn valuable skills, and become part
+                    of a supportive community.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-6 order-lg-1 animate__animated animate__fadeInRight"
+              style="animation-delay: 0.2s"
+            >
+              <img
+                src="/images/om.png"
+                class="card-img rounded-3"
+                alt="Our Mission"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Founders Section -->
+      <section class="founders-section">
+        <div class="container">
+          <div class="section-header animate__animated animate__fadeInUp">
+            <h2>Meet Our Founders</h2>
+            <p>
+              The passionate individuals who built DoBU Martial Arts from the
+              ground up
+            </p>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div
+              class="col animate__animated animate__fadeInUp"
+              style="animation-delay: 0.1s"
+            >
+              <div class="founder-card">
+                <div class="special-badge">FOUNDER</div>
+                <img
+                  src="/images/t1.png"
+                  class="card-img-top"
+                  alt="Mauricio Gomez"
+                />
+                <div class="card-body">
+                  <h3>Mauricio Gomez</h3>
+                  <h5>Gym Owner/Head Martial Arts Coach</h5>
+                  <p>
+                    Mauricio Gomez founded DoBu Martial Arts with a vision to
+                    create a world-class training environment accessible to all.
+                    As Head Martial Arts Coach, Mauricio brings a wealth of
+                    expertise, holding a 4th Dan Blackbelt in Judo, a 3rd Dan
+                    Blackbelt in Jiu-jitsu, and a 1st Dan Blackbelt in Karate.
+                    He is also an accredited Muay Thai coach, skilled in various
+                    martial arts disciplines. Mauricio's deep commitment to
+                    technique and personal growth inspires members to reach
+                    their highest potential.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col animate__animated animate__fadeInUp"
+              style="animation-delay: 0.2s"
+            >
+              <div class="founder-card">
+                <img
+                  src="/images/t3.png"
+                  class="card-img-top"
+                  alt="Guy Victory"
+                />
+                <div class="card-body">
+                  <h3>Guy Victory</h3>
+                  <h5>Assistant Martial Arts Coach</h5>
+                  <p>
+                    Guy Victory serves as the Assistant Martial Arts Coach,
+                    dedicated to supporting and training members in their
+                    martial arts journey. With a 2nd Dan Blackbelt in Jiu-jitsu
+                    and a 1st Dan Blackbelt in Judo, Guy brings both experience
+                    and passion to his role. Known for his hands-on approach and
+                    commitment to discipline, he works alongside Mauricio to
+                    ensure a supportive and enriching training experience for
+                    all members.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <!-- Left side: Follow Us On and Social Icons below it -->
+        <div class="footer-left">
+          <p>Follow Us On</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/home" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/" aria-label="Facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/?lang=en" aria-label="Twitter">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right side: Contact Us and About Us links -->
+        <div class="footer-right">
+          <a href="contactUs.html">Contact Us</a>
+          <a href="aboutUs.html">About Us</a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          &copy; 2023 DoBU Martial Gym. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

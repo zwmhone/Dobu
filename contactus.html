@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <meta
+      name="description"
+      content="Information About The DoBu Martial Arts Gym anf How to contact us!"
+    />
+    <script
+      src="https://kit.fontawesome.com/c93f7e977e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      $(document).ready(function () {
+        $(".header").click(function () {
+          if ($(this).next(".body").hasClass("active")) {
+            $(this).next(".body").removeClass("active").slideUp();
+            $(this)
+              .children("span")
+              .removeClass("fa-chevron-up")
+              .addClass("fa-chevron-down");
+          } else {
+            $(".body").removeClass("active").slideUp();
+            $(".header span")
+              .removeClass("fa-chevron-up")
+              .addClass("fa-chevron-down");
+            $(this).next(".body").addClass("active").slideDown();
+            $(this)
+              .children("span")
+              .removeClass("fa-chevron-down")
+              .addClass("fa-chevron-up");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-dark border-bottom border-body"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <!-- Logo on the left side -->
+        <a href="Index.html" class="navbar-brand">
+          <img src="/images/logo.png" alt="Company Logo" class="logo" />
+        </a>
+
+        <!-- Toggle button for small screens -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="Index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="Plans.html">Plans</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="Instructors.html"
+                >Instructors</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="Facilities.html"
+                >Facilities</a
+              >
+            </li>
+          </ul>
+          <!-- Sign Up on the far right -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="SignUp.html">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="contact-info1">
+        <h2>GET IN TOUCH</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 info1-item">
+              <div class="info1-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info1-title">ADDRESS</div>
+              <p>DoBu Main<br />1234 C Street, Austin</p>
+              <p>DoBu Offic<br />1234 D Drive, Austin</p>
+            </div>
+            <div class="col-md-4 info1-item">
+              <div class="info1-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="info1-title">PHONE</div>
+              <p>DoBu<br />(303) 430-2011 phone<br />(303) 202-5646 fax</p>
+              <p>24/7 Service Dept<br />(303) 429-2011</p>
+            </div>
+            <div class="col-md-4 info1-item">
+              <div class="info1-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info1-title">EMAIL</div>
+              <p>Request for Proposal<br />dobumartialre@gmail.com</p>
+              <p>Service Calls<br />dobumartialser@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font bg-yellow-100 py-5" id="cu">
+        <div class="container lg:max-w-5xl mx-auto px-5 py-12 md:py-24">
+          <div class="card3 shadow-lg">
+            <div class="card3-body">
+              <h4 class="card3-title">Contact Us</h4>
+              <br />
+              <form action="send-contact.php" method="post">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="inputEmail4">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="inputEmail4"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+                  <br />
+                  <div class="form-group">
+                    <label for="inputPhoneNumber">Phone Number</label>
+                    <input
+                      type="phonenumber"
+                      class="form-control"
+                      id="inputPhoneNumber"
+                      placeholder="Phone Number"
+                      required
+                    />
+                  </div>
+                  <br />
+                </div>
+                <div class="form-group">
+                  <label for="UsersMessages" class="form-label"
+                    >Your Message</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  ></textarea>
+                  <br />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="accordion" style="text-align: justify">
+          <h3>Frequently Asked Question</h3>
+          <br />
+          <div class="header">
+            <h3>
+              What types of martial arts classes do you offer?<span
+                class="fa fa-chevron-down"
+              ></span>
+            </h3>
+          </div>
+          <div class="body">
+            <p>
+              DoBu Martial Arts provides classes in a variety of disciplines,
+              including Judo, Jiu-jitsu, Karate, and Muay Thai. We also have
+              fitness training and self-defense sessions, focusing on both
+              physical conditioning and practical techniques. Each class is
+              structured to cater to all skill levels, from beginners to
+              seasoned practitioners.
+            </p>
+          </div>
+
+          <div class="header">
+            <h3>
+              Do I need any prior experience to join a class?<span
+                class="fa fa-chevron-down"
+              ></span>
+            </h3>
+          </div>
+          <div class="body">
+            <p>
+              No prior experience is necessary. Our classes are designed to
+              welcome everyone, regardless of skill level. Our instructors work
+              closely with beginners to build a strong foundation and adjust the
+              intensity for advanced students to ensure they’re always
+              challenged and improving.
+            </p>
+          </div>
+
+          <div class="header">
+            <h3>
+              What should I bring to my first class?
+              <span class="fa fa-chevron-down"></span>
+            </h3>
+          </div>
+          <div class="body">
+            <p>
+              For your first session, we recommend bringing comfortable athletic
+              wear, water, and a towel. You won’t need martial arts-specific
+              gear immediately, but if you already own items like gloves or a
+              gi, feel free to bring them. We also have gear available at the
+              gym if needed.
+            </p>
+          </div>
+          <div class="header">
+            <h3>
+              Is there a minimum age requirement for joining classes?<span
+                class="fa fa-chevron-down"
+              ></span>
+            </h3>
+          </div>
+          <div class="body">
+            <p>
+              Yes, we offer classes for students aged 5 and up. We divide
+              classes by age and skill level, with dedicated sessions for kids,
+              teens, and adults. This ensures each group trains in an
+              environment tailored to their developmental needs and abilities.
+            </p>
+          </div>
+          <div class="header">
+            <h3>
+              Do you offer competition training or support for athletes?<span
+                class="fa fa-chevron-down"
+              ></span>
+            </h3>
+          </div>
+          <div class="body">
+            <p>
+              Yes, we offer specialized training for students who are interested
+              in competing in martial arts tournaments. Our experienced
+              instructors provide focused coaching to help athletes prepare for
+              competitions, including strategy, technique refinement, and mental
+              preparation.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <!-- Left side: Follow Us On and Social Icons below it -->
+        <div class="footer-left">
+          <p>Follow Us On</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/home">
+              <i
+                class="fa-brands fa-linkedin fa-bounce"
+                style="color: #74c0fc"
+              ></i>
+            </a>
+            <a href="https://www.facebook.com/">
+              <i
+                class="fa-brands fa-facebook fa-bounce"
+                style="color: #74c0fc"
+              ></i>
+            </a>
+            <a href="https://www.instagram.com/">
+              <i
+                class="fa-brands fa-instagram fa-bounce"
+                style="color: #74c0fc"
+              ></i>
+            </a>
+            <a href="https://twitter.com/?lang=en">
+              <i
+                class="fa-brands fa-twitter fa-bounce"
+                style="color: #74c0fc"
+              ></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right side: Contact Us and About Us links -->
+        <div class="footer-right">
+          <a href="ContactUs.html">Contact Us</a>
+          <a href="AboutUs.html">About Us</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
